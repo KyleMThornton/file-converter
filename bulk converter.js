@@ -13,7 +13,7 @@ const files = glob.sync(root_folder + '/**/**.SAM')
 let commandArray = []
 
 for (x in files) {
-    commandArray.push(`${legacyFileConverter} \"${files[x]}\" /silent`)
+    commandArray.push(`\"${legacyFileConverter}\" \"${files[x]}\" /silent`)
 }
 
 const convert = (arr,i) => {
